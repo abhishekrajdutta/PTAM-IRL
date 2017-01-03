@@ -1,4 +1,4 @@
-<launch>
+ <launch>
 
   <!-- these are the arguments you can pass this launch file, for example paused:=true -->
   <arg name="paused" default="false"/>
@@ -29,6 +29,6 @@
   <!-- ros_control ron launch file -->
   <include file="$(find ron_control)/launch/ron_control.launch" />
 
-  <!--include file="$(find usingjoy)/launch/joystick.launch" /-->
+  <include file="$(find usingjoy)/launch/joystick.launch" />
 
 </launch>
