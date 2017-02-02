@@ -1,0 +1,19 @@
+digraph G {
+"link3" -> "link4"[label="Broadcaster: /robot_state_publisher\nAverage rate: 50.202 Hz\nMost recent transform: 1470.481 ( 0.013 sec old)\nBuffer length: 4.960 sec\n"];
+"link1" -> "left_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 50.202 Hz\nMost recent transform: 1470.481 ( 0.013 sec old)\nBuffer length: 4.960 sec\n"];
+"link1" -> "right_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 50.202 Hz\nMost recent transform: 1470.481 ( 0.013 sec old)\nBuffer length: 4.960 sec\n"];
+"odom" -> "base_link"[label="Broadcaster: /gazebo\nAverage rate: 100.201 Hz\nMost recent transform: 1470.492 ( 0.002 sec old)\nBuffer length: 4.970 sec\n"];
+"map" -> "odom"[label="Broadcaster: /amcl\nAverage rate: 40.201 Hz\nMost recent transform: 1470.563 ( -0.069 sec old)\nBuffer length: 4.975 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1470.494"[ shape=plaintext ] ;
+ }->"link3";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1470.494"[ shape=plaintext ] ;
+ }->"link1";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1470.494"[ shape=plaintext ] ;
+ }->"map";
+}

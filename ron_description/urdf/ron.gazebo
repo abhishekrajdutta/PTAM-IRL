@@ -18,7 +18,7 @@
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <material>Gazebo/Grey</material>
- </gazebo>  
+ </gazebo>
 
   <!-- Link2 -->
   <gazebo reference="link2">
@@ -88,7 +88,7 @@
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
     <material>Gazebo/Black</material>
-  </gazebo> 
+  </gazebo>
 
   <!-- camera -->
   <gazebo reference="camera_link">
@@ -107,7 +107,7 @@
           </clip>
         <noise>
           <type>gaussian</type>
-          <!-- Noise is sampled independently per pixel on each frame.  
+          <!-- Noise is sampled independently per pixel on each frame.
                That pixel's noise value is added to each of its color
                channels, which at that point lie in the range [0,1]. -->
           <mean>0.0</mean>
@@ -129,11 +129,11 @@
         <distortionT2>0.0</distortionT2>
       </plugin>
     </sensor>
-  </gazebo>  
+  </gazebo>
 
 
 
-   
+
 
   <!-- hokuyo -->
   <gazebo reference="hokuyo_link">
@@ -174,7 +174,7 @@
 
   <!--kinect-->
 
-  <gazebo reference="kinect_link">  
+  <gazebo reference="kinect_link">
       <sensor type="depth" name="camera">
         <always_on>true</always_on>
         <update_rate>20.0</update_rate>
