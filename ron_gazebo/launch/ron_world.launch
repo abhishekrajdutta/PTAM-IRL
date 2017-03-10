@@ -26,12 +26,23 @@
   <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
 	args="-urdf -model ron -param robot_description"/>
-
   <!-- ros_control ron launch file -->
   <include file="$(find ron_control)/launch/ron_control.launch" />
-<!--  -->
-  <!-- <include file="$(find usingjoy)/launch/joystick.launch" /> -->
+
+  <include file="$(find usingjoy)/launch/joystick.launch" />
+  
+
+
+  
+  <arg name="map_file" default="$(find usingjoy)/square/map.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+  <node pkg="rviz" type="rviz" name="rviz" args="-d /home/abhishek/.rviz/nav.rviz"/>
+  <include file="$(find ron_2dnav)/launch/move_base.launch" />
 
   <!-- <include file="$(find ptam)/launch/ptam1.launch" /> -->
+
+
+
 
 </launch>
